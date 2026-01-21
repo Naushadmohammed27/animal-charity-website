@@ -1,19 +1,3 @@
-# PawCare Foundation (Animal Charity Website)
-
-✅ Built using **HTML5 + CSS3 + JavaScript**  
-✅ Single-page responsive website for an animal charity organization  
-✅ Includes: Mission, Programs, Impact, Donate (with receipt), Contact
-
----
-
-## 📁 Project Files
-
-- `index.html` → Main website page
-- `styles.css` → Full styling (responsive)
-- `script.js` → Interactions (menu, counters, donate form, receipt download)
-- `README.md` → Instructions
-
----
 
 ## ▶️ How to Run
 
