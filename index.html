@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawCare Foundation | Animal Charity</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="PawCare Foundation Home">
+      <span class="logo">🐾</span>
+      <span class="brand-text">PawCare Foundation</span>
+    </a>
+
+    <nav class="links" id="navLinks" aria-label="Primary navigation">
+      <a href="#mission">Mission</a>
+      <a href="#programs">Programs</a>
+      <a href="#impact">Impact</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="tag">Animal Rescue • Shelter • Adoption</p>
+        <h1>Every paw deserves a safe home.</h1>
+        <p class="sub">
+          We rescue, treat, shelter, and rehome abandoned animals. Your support funds
+          food, vaccines, surgery, and emergency care.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#donate">Donate Now</a>
+          <a class="btn secondary" href="#programs">Explore Programs</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <span class="trust-number" id="statRescued">0</span>
+            <span class="trust-label">Animals Rescued</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number" id="statAdopted">0</span>
+            <span class="trust-label">Successful Adoptions</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number" id="statMeals">0</span>
+            <span class="trust-label">Meals Served</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Featured rescue story card">
+        <div class="hero-card-top">
+          <div class="avatar">🐶</div>
+          <div>
+            <h3>Featured Rescue</h3>
+            <p class="muted">Meet “Buddy” — now happy & healthy.</p>
+          </div>
+        </div>
+        <div class="hero-card-body">
+          <p>
+            Buddy was found injured and hungry. After treatment and weeks of care,
+            he was adopted into a loving family.
+          </p>
+          <div class="progress">
+            <div class="progress-top">
+              <span>Medical Fund</span>
+              <span class="muted" id="medicalGoalText">₹ 0 / ₹ 0</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill" id="medicalProgress"></div>
+            </div>
+          </div>
+
+          <button class="btn primary full" id="quickDonateBtn">Quick Donate ₹500</button>
+          <p class="tiny muted">*Demo payment. No real transaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section" id="mission">
+      <div class="section-head">
+        <h2>Our Mission</h2>
+        <p class="muted">
+          PawCare Foundation works to protect animals through rescue, treatment,
+          shelter support, and community awareness.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Rescue</h3>
+          <p>Emergency pickup, first aid, and safe transport for injured animals.</p>
+        </article>
+        <article class="card">
+          <h3>Treatment</h3>
+          <p>Vaccines, surgery, medicine, and recovery support from trained vets.</p>
+        </article>
+        <article class="card">
+          <h3>Rehome</h3>
+          <p>Adoption drives and foster networks to find caring forever homes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section class="section alt" id="programs">
+      <div class="section-head">
+        <h2>Programs</h2>
+        <p class="muted">
+          Your donations power life-saving programs across rescue, shelter care,
+          and public education.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="program card">
+          <div class="icon">🏥</div>
+          <h3>Emergency Care</h3>
+          <p>24/7 vet support and urgent medical assistance for critical cases.</p>
+          <button class="btn tertiary donate-program" data-program="Emergency Care">Support</button>
+        </article>
+
+        <article class="program card">
+          <div class="icon">🍲</div>
+          <h3>Food & Shelter</h3>
+          <p>Daily meals, clean bedding, and safe spaces for rescued animals.</p>
+          <button class="btn tertiary donate-program" data-program="Food & Shelter">Support</button>
+        </article>
+
+        <article class="program card">
+          <div class="icon">🧑‍🤝‍🧑</div>
+          <h3>Adoption & Foster</h3>
+          <p>Foster homes, adoption events, and follow-ups to ensure wellbeing.</p>
+          <button class="btn tertiary donate-program" data-program="Adoption & Foster">Support</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section" id="impact">
+      <div class="section-head">
+        <h2>Our Impact</h2>
+        <p class="muted">
+          We believe in transparent work. See how your support creates real change.
+        </p>
+      </div>
+
+      <div class="impact">
+        <div class="impact-left card">
+          <h3>Donation Breakdown</h3>
+          <p class="muted">Example split for each donation amount.</p>
+
+          <div class="donut-wrap">
+            <div class="donut" id="donut" aria-label="Donation breakdown chart"></div>
+            <ul class="legend">
+              <li><span class="dot" style="--c: #4f46e5"></span> Medical Care (45%)</li>
+              <li><span class="dot" style="--c: #22c55e"></span> Food & Shelter (35%)</li>
+              <li><span class="dot" style="--c: #f59e0b"></span> Rescue Ops (20%)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="impact-right">
+          <div class="quote card">
+            <p>
+              “I adopted Luna from PawCare. They helped me understand her medical needs,
+              food habits, and training tips. She’s family now.”
+            </p>
+            <p class="muted">— A happy adopter</p>
+          </div>
+
+          <div class="stats card">
+            <h3>This Month</h3>
+            <div class="mini-grid">
+              <div class="mini">
+                <span class="mini-num" id="monthRescues">0</span>
+                <span class="mini-label">Rescues</span>
+              </div>
+              <div class="mini">
+                <span class="mini-num" id="monthTreatments">0</span>
+                <span class="mini-label">Treatments</span>
+              </div>
+              <div class="mini">
+                <span class="mini-num" id="monthAdoptions">0</span>
+                <span class="mini-label">Adoptions</span>
+              </div>
+              <div class="mini">
+                <span class="mini-num" id="monthMeals">0</span>
+                <span class="mini-label">Meals</span>
+              </div>
+            </div>
+            <p class="tiny muted">*Numbers are demo values for project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate -->
+    <section class="section alt" id="donate">
+      <div class="section-head">
+        <h2>Donate</h2>
+        <p class="muted">
+          Choose an amount, select a program, and generate a donation receipt (demo).
+        </p>
+      </div>
+
+      <div class="donate-layout">
+        <form class="card donate-form" id="donationForm">
+          <h3>Make a Donation</h3>
+
+          <label>
+            Full Name
+            <input type="text" id="donorName" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="donorEmail" placeholder="you@example.com" required />
+          </label>
+
+          <label>
+            Donation Amount (₹)
+            <div class="amount-row">
+              <input type="number" id="donationAmount" min="50" step="50" value="500" required />
+              <select id="presetAmount" aria-label="Preset amount">
+                <option value="">Preset</option>
+                <option value="250">₹250</option>
+                <option value="500" selected>₹500</option>
+                <option value="1000">₹1000</option>
+                <option value="2000">₹2000</option>
+              </select>
+            </div>
+            <p class="tiny muted">Minimum ₹50</p>
+          </label>
+
+          <label>
+            Program
+            <select id="donationProgram">
+              <option value="General Fund">General Fund</option>
+              <option value="Emergency Care">Emergency Care</option>
+              <option value="Food & Shelter">Food & Shelter</option>
+              <option value="Adoption & Foster">Adoption & Foster</option>
+            </select>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="anonymous" />
+            Donate anonymously
+          </label>
+
+          <button class="btn primary full" type="submit">Donate (Demo)</button>
+          <p class="tiny muted">This is a student project form. No payment gateway used.</p>
+        </form>
+
+        <aside class="card receipt" aria-label="Donation receipt preview">
+          <div class="receipt-top">
+            <h3>Receipt Preview</h3>
+            <button class="btn tertiary" id="downloadReceiptBtn">Download Receipt</button>
+          </div>
+
+          <div class="receipt-body" id="receiptBox">
+            <p class="muted tiny">Fill the form to generate receipt.</p>
+            <div class="receipt-item">
+              <span>Donor</span>
+              <strong id="rName">—</strong>
+            </div>
+            <div class="receipt-item">
+              <span>Email</span>
+              <strong id="rEmail">—</strong>
+            </div>
+            <div class="receipt-item">
+              <span>Program</span>
+              <strong id="rProgram">—</strong>
+            </div>
+            <div class="receipt-item">
+              <span>Amount</span>
+              <strong id="rAmount">—</strong>
+            </div>
+            <div class="receipt-item">
+              <span>Date</span>
+              <strong id="rDate">—</strong>
+            </div>
+            <div class="receipt-item">
+              <span>Receipt ID</span>
+              <strong id="rId">—</strong>
+            </div>
+
+            <hr />
+
+            <p class="tiny muted">
+              Thank you for helping animals. Your support provides rescue, food, shelter,
+              and medical care.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Want to volunteer or adopt? Send us a message.</p>
+      </div>
+
+      <div class="grid-2">
+        <form class="card contact-form" id="contactForm">
+          <label>
+            Name
+            <input type="text" id="cName" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" id="cPhone" placeholder="9876543210" />
+          </label>
+
+          <label>
+            Message
+            <textarea id="cMessage" rows="5" placeholder="How can we help?" required></textarea>
+          </label>
+
+          <button class="btn secondary full" type="submit">Send Message</button>
+          <p class="tiny muted" id="contactStatus"></p>
+        </form>
+
+        <div class="card info">
+          <h3>Visit Us</h3>
+          <p class="muted">
+            PawCare Foundation (Demo)<br />
+            City Center, India<br />
+            Mon–Sat: 9:00 AM – 6:00 PM
+          </p>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="muted tiny">Email</span>
+              <strong>help@pawcare.org</strong>
+            </div>
+            <div class="info-item">
+              <span class="muted tiny">Phone</span>
+              <strong>+91 90000 00000</strong>
+            </div>
+            <div class="info-item">
+              <span class="muted tiny">Instagram</span>
+              <strong>@pawcarefoundation</strong>
+            </div>
+            <div class="info-item">
+              <span class="muted tiny">UPI</span>
+              <strong>pawcare@upi</strong>
+            </div>
+          </div>
+
+          <div class="note">
+            <p class="tiny muted">
+              *All details are for project demo. Replace with real NGO details if needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© <span id="year"></span> PawCare Foundation. All rights reserved.</p>
+      <p class="tiny muted">Built with HTML5 • CSS3 • JavaScript</p>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
