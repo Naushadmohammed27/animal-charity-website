@@ -38,14 +38,6 @@
 
 ---
 
-## 🔧 Customization
-You can replace:
-- NGO name, email, phone, address
-- Statistics values in `script.js`
-- Colors in `styles.css` (variables in `:root`)
-
----
-
 ## ⚠️ Note
 This is a student project (demo).  
 No payment gateway / database is used.
